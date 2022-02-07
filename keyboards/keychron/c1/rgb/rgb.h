@@ -1,7 +1,16 @@
 #pragma once
 
 #include "quantum.h"
-// readability
+
+// Each layer gets a name for readability, which is then used in the keymap matrix below.
+enum layer_names {
+    MAC_BASE    = 0,
+    MAC_FN      = 1,
+    WIN_BASE    = 2,
+    WIN_FN      = 3,
+};
+
+// Readability
 #define XXX KC_NO
 
 #define LAYOUT_tkl_ansi( \

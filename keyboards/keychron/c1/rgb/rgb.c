@@ -27,18 +27,21 @@ static void mode_leds_update(void){
     writePin(LED_MAC_PIN, mode_leds_show && !mode_leds_windows);
 }
 
-bool dip_switch_update_user(uint8_t index, bool active){
+bool dip_switch_update_kb(uint8_t index, bool active){
     if(index == 0) {
         if(active) { // Mac mode
-            layer_move(0);
+            layer_move(MAC_BASE);
         } else { // Windows mode
-            layer_move(2);
+            layer_move(WIN_BASE);
         }
 
         // Update mode and update leds
         mode_leds_windows = !active;
         mode_leds_update();
     }
+
+    dip_switch_update_user(index, active);
+    return true;
     return true;
 }
 
