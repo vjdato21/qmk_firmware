@@ -8,7 +8,7 @@ A customizable TKL keyboard.
 
 Make example for this keyboard (after setting up your build environment):
 
-    make keychron/c1/rgb:rgb_ansi
+    make keychron/c1/rgb:default
 
 ## How to Flash
 Flashing example for this keyboard:

@@ -63,7 +63,7 @@ Lock Mac | -
 
 Make example for this keyboard (after setting up your build environment):
 
-    make keychron/c1/plain:plain_ansi
+    make keychron/c1/plain:default
 
 [Video](https://www.youtube.com/watch?v=aUiKHdI5Vk8) explaining installation for a similar keyboard.
 

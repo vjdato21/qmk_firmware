@@ -77,7 +77,7 @@ Toggle backlight | -
 
 Make example for this keyboard (after setting up your build environment):
 
-    make keychron/c1/white:white_ansi
+    make keychron/c1/white:default
 
 [Video](https://www.youtube.com/watch?v=aUiKHdI5Vk8) explaining installation for a similar keyboard.
 
