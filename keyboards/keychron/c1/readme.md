@@ -4,8 +4,8 @@
 
 A customizable TKL keyboard.
 
-* Keyboard Maintainer(s): [SonixQMK](https://github.com/SonixQMK), [IsaacDynamo](https://github.com/IsaacDynamo), [noldevin](https://github.com/noldevin), [vjdato21](https://github.com/vjdato21)
-* Hardware Supported: Keychron C1 RGB, White, Plain
+* Keyboard Maintainer(s): [SonixQMK](https://github.com/SonixQMK), [noldevin](https://github.com/noldevin), [vjdato21](https://github.com/vjdato21), [IsaacDynamo](https://github.com/IsaacDynamo), [edlf](https://github.com/edlf)
+* Hardware Supported: All variants of Keychron C1
 * Hardware Availability: [Keychron](https://www.keychron.com/products/keychron-c1-wired-mechanical-keyboard)
 
 * * *
