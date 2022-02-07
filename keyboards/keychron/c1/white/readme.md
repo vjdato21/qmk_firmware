@@ -1,7 +1,5 @@
 # Keychron C1 White
 
-![Keychron C1](https://i.imgur.com/oB9h56v.png)
-
 A customizable TKL keyboard.
 
 * Keyboard Maintainer(s): [SonixQMK](https://github.com/SonixQMK), [IsaacDynamo](https://github.com/IsaacDynamo)
