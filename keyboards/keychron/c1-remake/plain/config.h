@@ -20,8 +20,16 @@
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
+#define VENDOR_ID                   0x3434
+#define PRODUCT_ID                  0xFE20
+#define DEVICE_VER                  0x0001
+
+#define MANUFACTURER                Keychron
+// \x43\x31 is "C1" in ASCII hex, this is used to prevent macro expansion, because C1 is also a pin macro.
+#define PRODUCT                     Keychron \x43\x31
 #define DESCRIPTION                 Keychron \x43\x31 Plain
 
+#define WAIT_FOR_USB
 #define USB_MAX_POWER_CONSUMPTION   100
 
 /* key matrix size */
@@ -49,5 +57,11 @@
 #define LED_MAC_PIN                 B4
 #define LED_WIN_PIN                 B5
 
+/* Enable NKRO by default */
+#define FORCE_NKRO
+
 #define DYNAMIC_KEYMAP_LAYER_COUNT     4
 #define DYNAMIC_KEYMAP_EEPROM_MAX_ADDR 1000
+
+/* Polling Rate */
+#define USB_POLLING_INTERVAL_MS 1
