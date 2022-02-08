@@ -1,5 +1,5 @@
 /* USB Device descriptor parameter */
-#define DESCRIPTION                 Keychron \x43\x31 Plain
+#define DESCRIPTION                 Keychron \x43\x31 White
 
 #define USB_MAX_POWER_CONSUMPTION   100
 
