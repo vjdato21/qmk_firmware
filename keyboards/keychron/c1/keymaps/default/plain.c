@@ -21,14 +21,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define KC_CORT LGUI(KC_C)          // Cortana
 #define KC_LOCK LGUI(KC_L)          // Lock
 #define KC_SNIP LGUI(LSFT(KC_S))    // Windows snip tool
-#define KC_W_FN MO(3)          // Windows Fn
+#define KC_W_FN MO(3)               // Windows Fn
 
 #define KC_MSSN LGUI(KC_F3)         // Mission Control
 #define KC_FIND LALT(LGUI(KC_SPC))  // Finder
 #define KC_SIRI LGUI(KC_SPC)        // Siri
 #define KC_MSCR LSFT(LGUI(KC_3))    // Mac screenshot
 #define KC_MSNP LSFT(LGUI(KC_4))    // Mac snip tool
-#define KC_M_FN MO(1)          // Mac Fn
+#define KC_M_FN MO(1)               // Mac Fn
 #define KD_M_LK LCMD(LCTL(KC_Q))    // Mac Lock
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {

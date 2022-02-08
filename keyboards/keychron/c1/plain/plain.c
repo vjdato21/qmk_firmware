@@ -1,7 +1,7 @@
 #if CH_CFG_NO_IDLE_THREAD == TRUE
 
-#    define CYCLES_PER_LOOP 9
-#    define LOOP_TIMES (48000000 / (CH_CFG_ST_FREQUENCY) / (CYCLES_PER_LOOP))
+#define CYCLES_PER_LOOP 9
+#define LOOP_TIMES (48000000 / (CH_CFG_ST_FREQUENCY) / (CYCLES_PER_LOOP))
 
 void chThdSleep(sysinterval_t time) {
     uint32_t loops = time * LOOP_TIMES;

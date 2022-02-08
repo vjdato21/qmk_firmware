@@ -1,6 +1,3 @@
-# project specific files
-SRC = rand.c
-
 # MCU name
 MCU = SN32F268F
 
