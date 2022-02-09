@@ -3,7 +3,7 @@
 A customizable TKL keyboard.
 
 * Keyboard Maintainer(s): [SonixQMK](https://github.com/SonixQMK), [IsaacDynamo](https://github.com/IsaacDynamo)
-* Hardware Supported: Keychron C1 White
+* Hardware Supported: Keychron C1 White (SN32F268)
 * Hardware Availability: [Keychron](https://www.keychron.com/products/keychron-c1-wired-mechanical-keyboard)
 
 # Install
