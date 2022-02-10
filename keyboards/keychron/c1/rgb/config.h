@@ -26,6 +26,9 @@
 // Connects each switch in the dip switch to the GPIO pin of the MCU
 #define DIP_SWITCH_PINS     { D4 }
 
+/* Disable RGB while USB is sleeping */
+#define RGB_DISABLE_WHEN_USB_SUSPENDED true
+
 /* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */
 #define DEBOUNCE            0
 
