@@ -1,6 +1,43 @@
-#ifdef RGB_MATRIX_ENABLE
+/* Copyright 2021 IsaacDynamo
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
 
-#include "rgb_matrix.h"
+void suspend_power_down_kb(void) {
+    // Turn leds off
+    mode_leds_show = false;
+    mode_leds_update();
+
+    // Suspend backlight
+    led_matrix_set_suspend_state(true);
+
+    suspend_power_down_user();
+}
+
+/// TODO: Clean-up workaround
+/// Currently the suspend_wakeup_init_kb() has issues. See https://github.com/SonixQMK/qmk_firmware/issues/80
+/// A workaround is to use housekeeping_task_kb() instead.
+void housekeeping_task_kb(void) {
+    // Turn on
+    mode_leds_show = true;
+    mode_leds_update();
+
+    // Restore backlight
+    led_matrix_set_suspend_state(false);
+
+    housekeeping_task_user();
+}
 
 #define XX NO_LED
 
@@ -35,5 +72,3 @@ led_config_t g_led_config = { {
    B,    4, 4, 4, 4, 4, 4, 4, 4, 4, 4,    B,    4,
    B, B, B,          4,          B, B, B, B, 4, 4, 4
 } };
-
-#endif
