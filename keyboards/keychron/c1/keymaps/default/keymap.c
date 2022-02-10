@@ -37,12 +37,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     #define LAYOUT_tkl_ansi LAYOUT_tkl_ansi_260
     #define LGT_VAD BL_DEC              // Decrease KB Brightness
     #define LGT_VAI BL_INC              // Increase KB Brightness
-    #define EXTRA_A KC_TRANS            // None
+    #define EXTRA_A KC_TRNS            // None
     #define EXTRA_B BL_TOGG             // Toggle BL
-    #define EXTRA_C KC_TRANS            // None
-    #define EXTRA_D KC_TRANS            // None
-    #define EXTRA_E KC_TRANS            // None
-    #define EXTRA_F KC_TRANS            // None
+    #define EXTRA_C KC_TRNS            // None
+    #define EXTRA_D KC_TRNS            // None
+    #define EXTRA_E KC_TRNS            // None
+    #define EXTRA_F KC_TRNS            // None
 #elif defined(RGB_MATRIX_ENABLE)
     #define LAYOUT_tkl_ansi LAYOUT_tkl_ansi_240B
     #define LGT_VAD RGB_VAD             // Decrease KB Brightness
@@ -55,14 +55,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     #define EXTRA_F RGB_SAD             // Decrease RGB Saturation
 #else
     #define LAYOUT_tkl_ansi LAYOUT_tkl_ansi_260
-    #define LGT_VAD KC_TRANS            // Decrease KB Brightness
-    #define LGT_VAI KC_TRANS            // Increase KB Brightness
+    #define LGT_VAD KC_TRNS            // Decrease KB Brightness
+    #define LGT_VAI KC_TRNS            // Increase KB Brightness
     #define EXTRA_A LCMD(LCTL(KC_Q))    // Mac Lock
     #define EXTRA_B KC_LGUI(KC_L)       // Windows Lock
-    #define EXTRA_C KC_TRANS            // None
-    #define EXTRA_D KC_TRANS            // None
-    #define EXTRA_E KC_TRANS            // None
-    #define EXTRA_F KC_TRANS            // None
+    #define EXTRA_C KC_TRNS            // None
+    #define EXTRA_D KC_TRNS            // None
+    #define EXTRA_E KC_TRNS            // None
+    #define EXTRA_F KC_TRNS            // None
 #endif
 
 
