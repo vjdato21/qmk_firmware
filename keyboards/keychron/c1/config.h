@@ -28,8 +28,5 @@
 #define MANUFACTURER        Keychron
 #define PRODUCT             Keychron \x43\x31
 
-/* Disable RGB while USB is sleeping */
-#define RGB_DISABLE_WHEN_USB_SUSPENDED true
-
 /* Polling Rate */
 #define USB_POLLING_INTERVAL_MS 1
