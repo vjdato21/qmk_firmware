@@ -1,3 +1,20 @@
+/* Copyright 2020 Dimitris Mantzouranis <d3xter93@gmail.com>
+ * Copyright 2022 Eduardo Fernandes
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
 /* USB Device descriptor parameter */
 #define DESCRIPTION                 Keychron \x43\x31 White
 
@@ -53,6 +70,9 @@
 
 /* Connects each switch in the dip switch to the GPIO pin of the MCU */
 #define DIP_SWITCH_PINS             { D7 }
+
+/* Disable RGB while USB is sleeping */
+#define LED_DISABLE_WHEN_USB_SUSPENDED true
 
 /* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */
 #define DEBOUNCE                    5

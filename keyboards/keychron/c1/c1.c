@@ -1,6 +1,7 @@
 /* Copyright 2020 Adam Honse <calcprogrammer1@gmail.com>
  * Copyright 2020 Dimitris Mantzouranis <d3xter93@gmail.com>
  * Copyright 2021 Harrison Chan (Xelus)
+ * Copyright 2021 IsaacDynamo
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -63,4 +64,17 @@ void keyboard_pre_init_kb(void) {
     }
 
     keyboard_pre_init_user();
+}
+
+void suspend_power_down_kb(void) {
+    // Turn leds off
+    mode_leds_show = false;
+    mode_leds_update();
+
+    #if defined(LED_MATRIX_ENABLE)
+        // Suspend backlight
+        led_matrix_set_suspend_state(true);
+    #endif
+
+    suspend_power_down_user();
 }

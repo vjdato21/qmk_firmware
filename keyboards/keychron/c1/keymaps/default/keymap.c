@@ -37,8 +37,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     #define LAYOUT_tkl_ansi LAYOUT_tkl_ansi_260
     #define LGT_VAD BL_DEC              // Decrease KB Brightness
     #define LGT_VAI BL_INC              // Increase KB Brightness
-    #define EXTRA_A KC_TRNS             // None
-    #define EXTRA_B BL_TOGG             // Toggle BL
+    #define EXTRA_A BL_TOGG             // Toggle BL
+    #define EXTRA_B BL_STEP             // Cycle LED Modes
     #define LGT_HUI KC_TRNS             // None
     #define LGT_HUD KC_TRNS             // None
     #define LGT_SAI KC_TRNS             // None

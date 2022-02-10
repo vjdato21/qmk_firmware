@@ -14,31 +14,6 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-void suspend_power_down_kb(void) {
-    // Turn leds off
-    mode_leds_show = false;
-    mode_leds_update();
-
-    // Suspend backlight
-    led_matrix_set_suspend_state(true);
-
-    suspend_power_down_user();
-}
-
-/// TODO: Clean-up workaround
-/// Currently the suspend_wakeup_init_kb() has issues. See https://github.com/SonixQMK/qmk_firmware/issues/80
-/// A workaround is to use housekeeping_task_kb() instead.
-void housekeeping_task_kb(void) {
-    // Turn on
-    mode_leds_show = true;
-    mode_leds_update();
-
-    // Restore backlight
-    led_matrix_set_suspend_state(false);
-
-    housekeeping_task_user();
-}
-
 #define XX NO_LED
 
 // Mark keys that are black & orange with the default keychron keycaps.
