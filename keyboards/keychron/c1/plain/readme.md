@@ -20,11 +20,12 @@ A customizable TKL keyboard.
 
 Without Fn | With Fn
 ---------- | -------
-ESC | Reset keyboard
 F1 | Decrease PC Brightness
 F2 | Increase PC Brightness
 F3 | Task View
 F4 | File Explorer
+F5 | Decrease KB Brightness
+F6 | Increase KB Brightness
 F7 | Previous Track
 F8 | Play/Pause Track
 F9 | Next Track
@@ -32,8 +33,10 @@ F10 | Mute
 F11 | Decrease Volume
 F12 | Increase Volume
 Print Screen | Snip & Sketch
-Cortana | -
-Lock PC | -
+Cortana / Microsoft Teams | None
+Lock your PC | None
+⊞ | GUI Lock Toggle
+Home | NKRO Toggle
 
 </details>
 
@@ -42,11 +45,12 @@ Lock PC | -
 
 Without Fn | With Fn
 ---------- | -------
-ESC | Reset keyboard
 F1 | Decrease PC Brightness
 F2 | Increase PC Brightness
-F3 | None
+F3 | Mission Control
 F4 | Finder
+F5 | Decrease KB Brightness
+F6 | Increase KB Brightness
 F7 | Previous Track
 F8 | Play/Pause Track
 F9 | Next Track
@@ -54,8 +58,10 @@ F10 | Mute
 F11 | Decrease Volume
 F12 | Increase Volume
 Take a screenshot (whole screen) | Take a screenshot (specific area)
-Siri (hold down) | -
-Lock Mac | -
+Siri (hold down) | None
+Lock your Mac | None
+⌘ | GUI Lock Toggle
+Home | NKRO Toggle
 
 </details>
 

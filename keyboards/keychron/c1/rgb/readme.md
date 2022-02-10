@@ -38,8 +38,8 @@ F11 | Decrease Volume
 F12 | Increase Volume
 Print Screen | Snip & Sketch
 Cortana / Microsoft Teams | None
-Change RGB | Toggle RGB
-⊞ | Windows Key Lock Toggle
+Cycle RGB Mode | Toggle RGB
+⊞ | GUI Lock Toggle
 Home | NKRO Toggle
 ↑ | Increase RGB Hue
 ← | Decrease RGB Saturation
@@ -67,7 +67,8 @@ F11 | Decrease Volume
 F12 | Increase Volume
 Take a screenshot (whole screen) | Take a screenshot (specific area)
 Siri (hold down) | None
-Change RGB | Toggle RGB
+Cycle RGB Mode | Toggle RGB
+⌘ | GUI Lock Toggle
 Home | NKRO Toggle
 ↑ | Increase RGB Hue
 ← | Decrease RGB Saturation
