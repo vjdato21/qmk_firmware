@@ -64,11 +64,3 @@ void keyboard_pre_init_kb(void) {
 
     keyboard_pre_init_user();
 }
-
-void suspend_power_down_kb(void) {
-    // Turn leds off
-    mode_leds_show = false;
-    mode_leds_update();
-
-    suspend_power_down_user();
-}
