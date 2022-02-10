@@ -58,7 +58,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     #define LGT_VAD KC_TRNS             // None
     #define LGT_VAI KC_TRNS             // None
     #define EXTRA_A LCMD(LCTL(KC_Q))    // Mac Lock
-    #define EXTRA_B KC_LGUI(KC_L)       // Windows Lock
+    #define EXTRA_B LGUI(KC_L)          // Windows Lock
     #define LGT_HUI KC_TRNS             // None
     #define LGT_HUD KC_TRNS             // None
     #define LGT_SAI KC_TRNS             // None

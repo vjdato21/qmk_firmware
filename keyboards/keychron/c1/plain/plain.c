@@ -1,3 +1,16 @@
+// Size optimizations to fit VIA support
+//
+// These optimizations are pretty intrusive because they remove the idle thread.
+// Without idle thread some sleep related functions no longer function.
+// These broken functions are overwritten with patched variants.
+//
+// These optimization are copied from:
+// https://github.com/gloryhzw/qmk_firmware/blob/sn32/keyboards/gmmk/full
+//
+// This file adds patch sleep related functions that work without idle threads.
+
+#include "quantum.h"
+
 #if CH_CFG_NO_IDLE_THREAD == TRUE
 
 #define CYCLES_PER_LOOP 9
