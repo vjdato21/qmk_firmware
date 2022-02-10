@@ -37,32 +37,32 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     #define LAYOUT_tkl_ansi LAYOUT_tkl_ansi_260
     #define LGT_VAD BL_DEC              // Decrease KB Brightness
     #define LGT_VAI BL_INC              // Increase KB Brightness
-    #define EXTRA_A KC_TRNS            // None
+    #define EXTRA_A KC_TRNS             // None
     #define EXTRA_B BL_TOGG             // Toggle BL
-    #define EXTRA_C KC_TRNS            // None
-    #define EXTRA_D KC_TRNS            // None
-    #define EXTRA_E KC_TRNS            // None
-    #define EXTRA_F KC_TRNS            // None
+    #define LGT_HUI KC_TRNS             // None
+    #define LGT_HUD KC_TRNS             // None
+    #define LGT_SAI KC_TRNS             // None
+    #define LGT_SAD KC_TRNS             // None
 #elif defined(RGB_MATRIX_ENABLE)
     #define LAYOUT_tkl_ansi LAYOUT_tkl_ansi_240B
     #define LGT_VAD RGB_VAD             // Decrease KB Brightness
     #define LGT_VAI RGB_VAI             // Increase KB Brightness
     #define EXTRA_A RGB_TOG             // Toggle RGB
     #define EXTRA_B RGB_MOD             // Cycle RGB Modes
-    #define EXTRA_C RGB_HUI             // Increase RGB Hue
-    #define EXTRA_D RGB_HUD             // Decrease RGB Hue
-    #define EXTRA_E RGB_SAI             // Increase RGB Saturation
-    #define EXTRA_F RGB_SAD             // Decrease RGB Saturation
+    #define LGT_HUI RGB_HUI             // Increase RGB Hue
+    #define LGT_HUD RGB_HUD             // Decrease RGB Hue
+    #define LGT_SAI RGB_SAI             // Increase RGB Saturation
+    #define LGT_SAD RGB_SAD             // Decrease RGB Saturation
 #else
     #define LAYOUT_tkl_ansi LAYOUT_tkl_ansi_260
-    #define LGT_VAD KC_TRNS            // Decrease KB Brightness
-    #define LGT_VAI KC_TRNS            // Increase KB Brightness
+    #define LGT_VAD KC_TRNS             // None
+    #define LGT_VAI KC_TRNS             // None
     #define EXTRA_A LCMD(LCTL(KC_Q))    // Mac Lock
     #define EXTRA_B KC_LGUI(KC_L)       // Windows Lock
-    #define EXTRA_C KC_TRNS            // None
-    #define EXTRA_D KC_TRNS            // None
-    #define EXTRA_E KC_TRNS            // None
-    #define EXTRA_F KC_TRNS            // None
+    #define LGT_HUI KC_TRNS             // None
+    #define LGT_HUD KC_TRNS             // None
+    #define LGT_SAI KC_TRNS             // None
+    #define LGT_SAD KC_TRNS             // None
 #endif
 
 
@@ -98,8 +98,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  NK_TOGG,  _______, \
         _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______, \
         _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,            _______,                               \
-        _______,            _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,            _______,            EXTRA_C,           \
-        _______,  _______,  GUI_TOG,                                _______,                                GUI_TOG,  _______,  _______,  _______,  EXTRA_F,  EXTRA_D,  EXTRA_E  \
+        _______,            _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,            _______,            LGT_HUI,           \
+        _______,  _______,  GUI_TOG,                                _______,                                GUI_TOG,  _______,  _______,  _______,  LGT_SAD,  LGT_HUD,  LGT_SAI  \
     ),
 
     /*  Windows layout
@@ -132,7 +132,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  NK_TOGG,  _______, \
         _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______, \
         _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,            _______,                               \
-        _______,            _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,            _______,            EXTRA_C,           \
-        _______,  GUI_TOG,  _______,                                _______,                                _______,  GUI_TOG,  _______,  _______,  EXTRA_F,  EXTRA_D,  EXTRA_E  \
+        _______,            _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,            _______,            LGT_HUI,           \
+        _______,  GUI_TOG,  _______,                                _______,                                _______,  GUI_TOG,  _______,  _______,  LGT_SAD,  LGT_HUD,  LGT_SAI  \
     )
 };
