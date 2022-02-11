@@ -23,6 +23,11 @@ enum layers{
     WIN_FN      = 3
 };
 
+enum custom_keycodes {
+    KC_MISSION_CONTROL = SAFE_RANGE,
+    KC_LAUNCHPAD
+};
+
 /* Keychron Fn */
 
 #define KC_TASK LGUI(KC_TAB)        // Task viewer
@@ -31,8 +36,8 @@ enum layers{
 #define KC_SNIP LGUI(LSFT(KC_S))    // Windows snip tool
 #define KC_W_FN MO(3)               // Windows Fn
 
-#define KC_MSSN LGUI(KC_F3)         // Mission Control
-#define KC_FIND LALT(LGUI(KC_SPC))  // Finder
+#define KC_MCTL KC_MISSION_CONTROL  // Mission Control
+#define KC_LPAD KC_LAUNCHPAD        // Finder
 #define KC_SIRI LGUI(KC_SPC)        // Siri
 #define KC_MSCR LSFT(LGUI(KC_3))    // Mac screenshot
 #define KC_MSNP LSFT(LGUI(KC_4))    // Mac snip tool
@@ -107,7 +112,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 
     [MAC_FN] = LAYOUT_tkl_ansi( \
-        RESET,              KC_BRID,  KC_BRIU,  KC_MSSN,  KC_FIND,  LGT_VAD,  LGT_VAI,  KC_MPRV,  KC_MPLY,  KC_MNXT,  KC_MUTE,  KC_VOLD,  KC_VOLU,  KC_MSNP,  _______,  XTR_AB,  \
+        RESET,              KC_BRID,  KC_BRIU,  KC_MCTL,  KC_LPAD,  LGT_VAD,  LGT_VAI,  KC_MPRV,  KC_MPLY,  KC_MNXT,  KC_MUTE,  KC_VOLD,  KC_VOLU,  KC_MSNP,  _______,  XTR_AB,  \
         _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  NK_TOGG,  _______, \
         _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______, \
         _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,            _______,                               \
@@ -149,3 +154,60 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______,  GUI_TOG,  _______,                                _______,                                _______,  GUI_TOG,  _______,  _______,  LGT_SAD,  LGT_HUD,  LGT_SAI  \
     )
 };
+
+// Manage Windows and Mac LEDs
+// - Show status of mode switch
+// - Turn LEDs off durring USB suspend
+static bool mode_leds_show = true;
+static bool mode_leds_windows;
+
+static void mode_leds_update(void){
+    writePin(LED_WIN_PIN, mode_leds_show && mode_leds_windows);
+    writePin(LED_MAC_PIN, mode_leds_show && !mode_leds_windows);
+}
+
+bool dip_switch_update_kb(uint8_t index, bool active){
+    if(index == 0) {
+        if(active) { // Mac mode
+            layer_move(0);
+        } else { // Windows mode
+            layer_move(2);
+        }
+
+        // Update mode and update leds
+        mode_leds_windows = !active;
+        mode_leds_update();
+    }
+
+    dip_switch_update_user(index, active);
+    return true;
+}
+
+void keyboard_pre_init_kb(void) {
+    // Setup Win & Mac LED Pins as output
+    setPinOutput(LED_WIN_PIN);
+    setPinOutput(LED_MAC_PIN);
+
+    keyboard_pre_init_user();
+}
+
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case KC_MISSION_CONTROL:
+            if (record->event.pressed) {
+                host_consumer_send(0x29F);
+            } else {
+                host_consumer_send(0);
+            }
+            return false;  // Skip all further processing of this key
+        case KC_LAUNCHPAD:
+            if (record->event.pressed) {
+                host_consumer_send(0x2A0);
+            } else {
+                host_consumer_send(0);
+            }
+            return false;  // Skip all further processing of this key
+        default:
+            return true;  // Process all other keycodes normally
+    }
+}
