@@ -37,7 +37,7 @@ enum custom_keycodes {
 #define KC_W_FN MO(3)               // Windows Fn
 
 #define KC_MCTL KC_MISSION_CONTROL  // Mission Control
-#define KC_LPAD KC_LAUNCHPAD        // Finder
+#define KC_LPAD KC_LAUNCHPAD        // Launchpad
 #define KC_SIRI LGUI(KC_SPC)        // Siri
 #define KC_MSCR LSFT(LGUI(KC_3))    // Mac screenshot
 #define KC_MSNP LSFT(LGUI(KC_4))    // Mac snip tool
