@@ -17,10 +17,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include QMK_KEYBOARD_H
 
 enum layers{
-    MAC_BASE    = 0,
-    MAC_FN      = 1,
-    WIN_BASE    = 2,
-    WIN_FN      = 3
+    MAC_BASE,
+    MAC_FN,
+    WIN_BASE,
+    WIN_FN
 };
 
 enum custom_keycodes {
@@ -34,14 +34,14 @@ enum custom_keycodes {
 #define KC_FLXP LGUI(KC_E)          // Windows file explorer
 #define KC_CORT LGUI(KC_C)          // Cortana
 #define KC_SNIP LGUI(LSFT(KC_S))    // Windows snip tool
-#define KC_W_FN MO(3)               // Windows Fn
+#define KC_W_FN MO(WIN_FN)          // Windows Fn
 
 #define KC_MCTL KC_MISSION_CONTROL  // Mission Control
 #define KC_LPAD KC_LAUNCHPAD        // Launchpad
 #define KC_SIRI LGUI(KC_SPC)        // Siri
 #define KC_MSCR LSFT(LGUI(KC_3))    // Mac screenshot
 #define KC_MSNP LSFT(LGUI(KC_4))    // Mac snip tool
-#define KC_M_FN MO(1)               // Mac Fn
+#define KC_M_FN MO(MAC_FN)          // Mac Fn
 
 /* Variant-tailored Defines */
 
@@ -169,9 +169,9 @@ static void mode_leds_update(void){
 bool dip_switch_update_kb(uint8_t index, bool active){
     if(index == 0) {
         if(active) { // Mac mode
-            layer_move(0);
+            layer_move(MAC_BASE);
         } else { // Windows mode
-            layer_move(2);
+            layer_move(WIN_BASE);
         }
 
         // Update mode and update leds
