@@ -8,4 +8,4 @@ BOOTMAGIC_ENABLE = yes # Virtual DIP switch configuration
 EXTRAKEY_ENABLE = yes    # Audio control and System control
 NKRO_ENABLE = yes        # USB Nkey Rollover
 DIP_SWITCH_ENABLE = yes
-WAIT_FOR_USB = yes
+WAIT_FOR_USB = no
