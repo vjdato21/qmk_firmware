@@ -1,4 +1,5 @@
 /* Copyright 2020 Dimitris Mantzouranis <d3xter93@gmail.com>
+ * Copyright 2021 IsaacDynamo
  * Copyright 2022 Eduardo Fernandes
  *
  * This program is free software: you can redistribute it and/or modify

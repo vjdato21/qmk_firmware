@@ -1,7 +1,7 @@
 /* Copyright 2020 Adam Honse <calcprogrammer1@gmail.com>
  * Copyright 2020 Dimitris Mantzouranis <d3xter93@gmail.com>
- * Copyright 2021 Harrison Chan (Xelus)
  * Copyright 2021 IsaacDynamo
+ * Copyright 2021 Harrison Chan (Xelus)
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
