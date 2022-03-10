@@ -34,7 +34,7 @@ F11 | Decrease Volume
 F12 | Increase Volume
 Print Screen | Snip & Sketch
 Cortana / Microsoft Teams | None
-Cycle LED Mode | Toggle RGB
+Cycle LED Mode | Toggle LED
 ⊞ | GUI Lock Toggle
 Home | NKRO Toggle
 
@@ -48,7 +48,7 @@ Without Fn | With Fn
 F1 | Decrease PC Brightness
 F2 | Increase PC Brightness
 F3 | Mission Control
-F4 | Finder
+F4 | None
 F5 | Decrease KB Brightness
 F6 | Increase KB Brightness
 F7 | Previous Track
@@ -59,7 +59,7 @@ F11 | Decrease Volume
 F12 | Increase Volume
 Take a screenshot (whole screen) | Take a screenshot (specific area)
 Siri (hold down) | None
-Cycle LED Mode | Toggle RGB
+Cycle LED Mode | Toggle LED
 ⌘ | GUI Lock Toggle
 Home | NKRO Toggle
 

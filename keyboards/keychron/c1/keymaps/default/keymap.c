@@ -23,25 +23,19 @@ enum layers{
     WIN_FN
 };
 
-enum custom_keycodes {
-    KC_MISSION_CONTROL = SAFE_RANGE,
-    KC_LAUNCHPAD
-};
-
 /* Keychron Fn */
 
-#define KC_TASK LGUI(KC_TAB)        // Task viewer
-#define KC_FLXP LGUI(KC_E)          // Windows file explorer
-#define KC_CORT LGUI(KC_C)          // Cortana
-#define KC_SNIP LGUI(LSFT(KC_S))    // Windows snip tool
-#define KC_W_FN MO(WIN_FN)          // Windows Fn
+#define KC_TASK LGUI(KC_TAB)            // Task viewer
+#define KC_FLXP LGUI(KC_E)              // Windows file explorer
+#define KC_CORT LGUI(KC_C)              // Cortana
+#define KC_SNIP LGUI(LSFT(KC_S))        // Windows snip tool
+#define KC_W_FN MO(WIN_FN)              // Windows Fn
 
-#define KC_MCTL KC_MISSION_CONTROL  // Mission Control
-#define KC_LPAD KC_LAUNCHPAD        // Launchpad
-#define KC_SIRI LGUI(KC_SPC)        // Siri
-#define KC_MSCR LSFT(LGUI(KC_3))    // Mac screenshot
-#define KC_MSNP LSFT(LGUI(KC_4))    // Mac snip tool
-#define KC_M_FN MO(MAC_FN)          // Mac Fn
+#define KC_MCTL LGUI(KC_UP)             // Mission Control
+#define KC_SIRI LGUI(KC_SPC)            // Siri
+#define KC_MSCR LSFT(LGUI(KC_3))        // Mac screenshot
+#define KC_MSNP LSFT(LGUI(KC_4))        // Mac snip tool
+#define KC_M_FN MO(MAC_FN)              // Mac Fn
 
 /* Variant-tailored Defines */
 
@@ -112,7 +106,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 
     [MAC_FN] = LAYOUT_tkl_ansi( \
-        RESET,              KC_BRID,  KC_BRIU,  KC_MCTL,  KC_LPAD,  LGT_VAD,  LGT_VAI,  KC_MPRV,  KC_MPLY,  KC_MNXT,  KC_MUTE,  KC_VOLD,  KC_VOLU,  KC_MSNP,  _______,  XTR_AB,  \
+        RESET,              KC_BRID,  KC_BRIU,  KC_MCTL,  _______,  LGT_VAD,  LGT_VAI,  KC_MPRV,  KC_MPLY,  KC_MNXT,  KC_MUTE,  KC_VOLD,  KC_VOLU,  KC_MSNP,  _______,  XTR_AB,  \
         _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  NK_TOGG,  _______, \
         _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______, \
         _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,            _______,                               \
@@ -189,25 +183,4 @@ void keyboard_pre_init_kb(void) {
     setPinOutput(LED_MAC_PIN);
 
     keyboard_pre_init_user();
-}
-
-bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-    switch (keycode) {
-        case KC_MISSION_CONTROL:
-            if (record->event.pressed) {
-                host_consumer_send(0x29F);
-            } else {
-                host_consumer_send(0);
-            }
-            return false;  // Skip all further processing of this key
-        case KC_LAUNCHPAD:
-            if (record->event.pressed) {
-                host_consumer_send(0x2A0);
-            } else {
-                host_consumer_send(0);
-            }
-            return false;  // Skip all further processing of this key
-        default:
-            return true;  // Process all other keycodes normally
-    }
 }

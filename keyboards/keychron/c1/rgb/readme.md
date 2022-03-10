@@ -56,7 +56,7 @@ Without Fn | With Fn
 F1 | Decrease PC Brightness
 F2 | Increase PC Brightness
 F3 | Mission Control
-F4 | Finder
+F4 | None
 F5 | Decrease KB Brightness
 F6 | Increase KB Brightness
 F7 | Previous Track
@@ -74,7 +74,6 @@ Home | NKRO Toggle
 ← | Decrease RGB Saturation
 ↓ | Decrease RGB Hue
 → | Increase RGB Saturation
-
 </details>
 
 * * *
