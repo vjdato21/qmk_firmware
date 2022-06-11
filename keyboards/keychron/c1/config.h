@@ -31,3 +31,6 @@
 
 /* Polling Rate */
 #define USB_POLLING_INTERVAL_MS 1
+
+/* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */
+#define DEBOUNCE            5
