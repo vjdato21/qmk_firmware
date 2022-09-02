@@ -29,9 +29,6 @@
 /* Disable RGB while USB is sleeping */
 #define RGB_DISABLE_WHEN_USB_SUSPENDED true
 
-/* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */
-#define DEBOUNCE            0
-
 /* LED Status indicators */
 #define LED_CAPS_LOCK_PIN   B10
 #define LED_MAC_PIN         B11 //labeled Mac on KB since no Scroll Lock
