@@ -85,7 +85,7 @@ In an occassion that the keyboard does not send keystrokes to your PC, press `FN
 ## Bootloader
 To enter the bootloader, you can use any of the following methods:
 - Press `FN + ESC` if the keyboard is already powered on.
-- Short the boot pads below the space bar, then plug in your keyboard."
+- Short the boot pads below the space bar, then plug in your keyboard.
 * * *
 For more information and more detailed flashing instructions, please visit [SonixQMK Docs](https://sonixqmk.github.io/qmk_docs/newbs_getting_started)
 
